@@ -3,12 +3,11 @@ const { getJoke } = require("../controllers/joke.js");
 const {
   onlyAllowGetMethod,
   invalidEndpoints,
-} = require("../middlewares/joke.js");
+} = require("../middlewares/joke.js"); 
 
 /**
  * Random Joke Endpoint
  */
-
 jokeRouter.all("/joke", onlyAllowGetMethod, getJoke);
 
 /**

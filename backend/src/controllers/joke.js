@@ -1,5 +1,8 @@
 const { getJokeFromChuck } = require("../services/joke.js");
 
+/**
+ * Communicating with the Chuck Norris API and sending a response back
+ */
 const getJoke = async (request, response) => {
   try {
     const randomJoke = await getJokeFromChuck();

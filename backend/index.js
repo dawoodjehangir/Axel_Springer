@@ -14,12 +14,10 @@ const { PORT } = require("./src/utils/constants.js");
  */
 const minimalServer = express();
 
-
 /**
  * Attaching a Router
  */
 minimalServer.use(jokeRouter);
-
 
 /**
  * Starting the server
