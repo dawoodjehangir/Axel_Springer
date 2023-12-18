@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const JokeContainer = ({ joke }) => {
-  return (
-    <div className="joke-container">
-      <p>This is something</p>
-    </div>
-  );
+  return <div className="joke-container">{joke}</div>;
 };
 
 export default JokeContainer;

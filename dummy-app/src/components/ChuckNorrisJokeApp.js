@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import JokeContainer from "./components/JokeContainer";
-import "./App.css"
+import JokeContainer from "./JokeContainer";
 
-function App() {
-
+const ChuckNorrisJokeApp = () => {
   const [joke, setJoke] = useState("");
 
   const fetchJoke = async () => {
@@ -17,15 +15,14 @@ function App() {
     }
   };
 
-
   return (
     <div className="App">
       <Header />
-      <MidDivider fetchTheJoke={fetchJoke}/>
-      <JokeContainer joke={joke}/>
+      <MidDivider toCall={fetchJoke}/>
+      <JokeContainer joke={joke} />
     </div>
   );
-}
+};
 
 function Header() {
   return (
@@ -44,17 +41,15 @@ function Header() {
   );
 }
 
-function MidDivider({fetchTheJoke}) {
+function MidDivider({toCall}) {
   return (
     <>
       <div className="Divider">
-        <div className="DividerText">In mood of a random Joke?</div>
-        <button onClick={fetchTheJoke}>Humor Me</button>
+        <div className="DividerText">Wanna get a Random Joke?</div>
+        <button onClick={toCall}>Get Joke</button>
       </div>
     </>
   );
 }
 
-
-
-export default App;
+export default ChuckNorrisJokeApp;
