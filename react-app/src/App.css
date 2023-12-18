@@ -1,20 +1,30 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* @font-face {
+  font-family: "04b_30";
+  src: url("https://api.chucknorris.io/font/04b_30.woff") format("woff");
+} */
+
+@font-face {
+  font-family: "ChuckNorris";
+  src: url("../public/fonts/ChuckNorris.otf") format("opentype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "WestTexas";
+  src: url("../public/fonts/WestTexas.ttf") format("truetype");
 }
 
-.App-header {
-  background-color: #282c34;
+/* .App-header {
+  background-color: #2d2f45;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +32,61 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+.ChuckHeader {
+  padding: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.ChuckFace {
+  width: 18%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ChuckOrangeText {
+  color: #f15b23;
+  font-family: "ChuckNorris";
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 10px;
+  padding: 0;
+  text-shadow: 1px 1px #222;
+}
+
+.Divider {
+  background-color: #2d2f45;
+  /* margin: 10px; */
+  padding: 20px;
+}
+
+.DividerText {
+  color: azure;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0 0 10px;
+  padding: 0;
+  text-shadow: 1px 1px #222;
+}
+
+.joke-container {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #2d2f45;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 26px;
+  font-family: "WestTexas";
+  background-color: #4C9D8D;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: auto;
+}
+
+button:hover {
+  background-color: #3B7A6E;
 }
