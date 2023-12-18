@@ -3,10 +3,9 @@ import Header from "../Header/Header";
 import Divider from "../Divider/Divider";
 import JokeContainer from "../JokeContainer/JokeContainer";
 import { fetchJoke } from "../../services/backendAPI.js";
-import { CHUCKNORRISIMAGE } from "../../utils/constants";
 import "./JokeApp.css";
 
-function JokeApp() {
+function JokeApp({ chuckIMG, invalidPage }) {
   const [joke, setJoke] = useState("");
 
   const handleFetchJoke = async () => {
@@ -20,9 +19,17 @@ function JokeApp() {
 
   return (
     <div className="AppContainer">
-      <Header chuckPNG={CHUCKNORRISIMAGE}/>
-      <Divider fetchTheJoke={handleFetchJoke} />
-      <JokeContainer jokeText={joke} />
+      {!invalidPage ? (
+        <>
+          <Header chuckPNG={chuckIMG} pageTitle={"CHUCK NORRIS"}/>
+          <Divider fetchTheJoke={handleFetchJoke} />
+          <JokeContainer jokeText={joke} />
+        </>
+      ) : (
+        <>
+          <Header chuckPNG={chuckIMG} pageTitle={"404 - Invalid Page"} />
+        </>
+      )}
     </div>
   );
 }
