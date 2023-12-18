@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import JokeContainer from "./components/JokeContainer";
-import "./App.css"
+import "./App.css";
 
 function App() {
-
   const [joke, setJoke] = useState("");
 
   const fetchJoke = async () => {
@@ -17,12 +16,11 @@ function App() {
     }
   };
 
-
   return (
     <div className="App">
       <Header />
-      <MidDivider fetchTheJoke={fetchJoke}/>
-      <JokeContainer joke={joke}/>
+      <MidDivider fetchTheJoke={fetchJoke} />
+      <JokeContainer joke={joke} />
     </div>
   );
 }
@@ -36,7 +34,7 @@ function Header() {
           alt="Chuck Norris"
           className="ChuckFace"
         />
-        <div>
+        <div className="TitleContainer">
           <span className="ChuckOrangeText">Chuck Norris</span>
         </div>
       </div>
@@ -44,7 +42,7 @@ function Header() {
   );
 }
 
-function MidDivider({fetchTheJoke}) {
+function MidDivider({ fetchTheJoke }) {
   return (
     <>
       <div className="Divider">
@@ -54,7 +52,5 @@ function MidDivider({fetchTheJoke}) {
     </>
   );
 }
-
-
 
 export default App;

@@ -1,54 +1,36 @@
-/* .App {
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .App {
   text-align: center;
-  min-height: 90vh;
+  min-height: 80vh;
   padding: 0px;
   background-color: #fff;
   border-radius: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 75vw;
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* @font-face {
-  font-family: "04b_30";
-  src: url("https://api.chucknorris.io/font/04b_30.woff") format("woff");
-} */
+
 
 @font-face {
   font-family: "ChuckNorris";
-  src: url("../public/fonts/ChuckNorris.otf") format("opentype");
+  src: url("./assets/fonts/ChuckNorris.otf") format("opentype");
 }
 
 @font-face {
   font-family: "WestTexas";
-  src: url("../public/fonts/WestTexas.ttf") format("truetype");
+  src: url("./assets/fonts/WestTexas.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Ranmor";
-  src: url("../public/fonts/Ranmor.ttf") format("truetype");
+  src: url("./assets/fonts/Ranmor.ttf") format("truetype");
 }
-/* .App-header {
-  background-color: #2d2f45;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .ChuckHeader {
-  padding: 25px;
+  padding: 5vh 0 5vh 0;
 }
 
 .ChuckFace {
@@ -56,60 +38,57 @@
   height: auto;
 }
 
+.TitleContainer {
+  padding: 1vh 4vh 1vh 4vh;
+}
+
 .ChuckOrangeText {
   color: #f15b23;
   font-family: "ChuckNorris";
-  font-size: 65px;
+  font-size: 4.2em;
   font-weight: 300;
-  margin: 0 0 10px;
-  padding: 10px;
-  text-shadow: 1px 1px #222;
+  text-shadow: 0.05em 0.05em #222;
 }
+
 /* #2d2f45; */
 .Divider {
-  /* background-color: #2d2f45; */
-  /* margin: 10px; */
-  /* padding: 20px; */
-  padding: 25px 0px 20px 0px;
+  padding: 2vh 0 2vh 0;
 }
 
 .DividerText {
   color: black;
-  font-family: 'Courier New', monospace;
-  font-size: 20px;
+  font-family: "Courier New", monospace;
+  font-size: 1.3em;
   font-weight: 00;
-  margin: 0 0 2vw;
-  padding: 0;
+  padding: 0 0 1.5vh 0;
 }
 
-
 .joke-container {
-  padding: 15px 0;
+  padding: 3vh 0 5vh 0;
   align-items: center;
   font-family: "Ranmor";
-  font-size: 30px;
+  font-size: 2em;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   color: black;
-  max-width: 90%; /* Set your desired maximum width */
-  width: 100%; /* Ensure responsiveness */
-  display: block;
+  max-width: 90%;
+  /* width: 100%;  */
+  /* display: block; */
   box-sizing: border-box;
 }
 
 /* #4c9d8d; */
-
 button {
-  padding: 10px 20px;
-  font-size: 26px;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
   font-family: "WestTexas";
   background-color: #2b2c33;
   color: #f15b23;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   width: auto;
 }
 
