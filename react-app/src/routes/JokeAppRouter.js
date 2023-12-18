@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
+import Main from "./Main";
 import { CHUCKNORRISIMAGE, NOT_ALLOWED } from "../utils/constants";
 
 const JokeAppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home chuckIMG={CHUCKNORRISIMAGE} invalidPage={false}/>} />
-        <Route path="*" element={<Home chuckIMG={NOT_ALLOWED} invalidPage={true}/>} />
+        <Route exact path="/" element={<Main chuckIMG={CHUCKNORRISIMAGE} invalidPage={false}/>} />
+        <Route path="*" element={<Main chuckIMG={NOT_ALLOWED} invalidPage={true}/>} />
       </Routes>
     </Router>
   );

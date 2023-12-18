@@ -1,7 +1,7 @@
 import React from "react";
 import JokeApp from "../components/JokeApp/JokeApp";
 
-function Home({ chuckIMG, invalidPage }) {
+function Main({ chuckIMG, invalidPage }) {
   return (
     <>
       <JokeApp chuckIMG={chuckIMG} invalidPage={invalidPage}/>
@@ -9,4 +9,4 @@ function Home({ chuckIMG, invalidPage }) {
   );
 }
 
-export default Home;
+export default Main;
