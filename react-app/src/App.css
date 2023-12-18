@@ -13,85 +13,8 @@
 }
 
 
-
-@font-face {
-  font-family: "ChuckNorris";
-  src: url("./assets/fonts/ChuckNorris.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "WestTexas";
-  src: url("./assets/fonts/WestTexas.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Ranmor";
-  src: url("./assets/fonts/Ranmor.ttf") format("truetype");
-}
-
-.ChuckHeader {
-  padding: 5vh 0 5vh 0;
-}
-
-.ChuckFace {
-  width: auto;
-  height: auto;
-}
-
 .TitleContainer {
   padding: 1vh 4vh 1vh 4vh;
 }
 
-.ChuckOrangeText {
-  color: #f15b23;
-  font-family: "ChuckNorris";
-  font-size: 4.2em;
-  font-weight: 300;
-  text-shadow: 0.05em 0.05em #222;
-}
 
-/* #2d2f45; */
-.Divider {
-  padding: 2vh 0 2vh 0;
-}
-
-.DividerText {
-  color: black;
-  font-family: "Courier New", monospace;
-  font-size: 1.3em;
-  font-weight: 00;
-  padding: 0 0 1.5vh 0;
-}
-
-.joke-container {
-  padding: 3vh 0 5vh 0;
-  align-items: center;
-  font-family: "Ranmor";
-  font-size: 2em;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
-  max-width: 90%;
-  /* width: 100%;  */
-  /* display: block; */
-  box-sizing: border-box;
-}
-
-/* #4c9d8d; */
-button {
-  padding: 0.5em 1em;
-  font-size: 1.5em;
-  font-family: "WestTexas";
-  background-color: #2b2c33;
-  color: #f15b23;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 1em;
-  width: auto;
-}
-
-button:hover {
-  background-color: black;
-}

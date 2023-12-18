@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "ChuckNorris";
+  src: url("../../assets/fonts/ChuckNorris.otf") format("opentype");
+}
+
+.ChuckHeader {
+  padding: 5vh 0 5vh 0;
+}
+.ChuckFace {
+  width: auto;
+  height: auto;
+}
+
+.ChuckOrangeText {
+  color: #f15b23;
+  font-family: "ChuckNorris";
+  font-size: 4.2em;
+  font-weight: 300;
+  text-shadow: 0.05em 0.05em #222;
+}

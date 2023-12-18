@@ -1,0 +1,35 @@
+/* #2d2f45; */
+@font-face {
+  font-family: "WestTexas";
+  src: url("../../assets/fonts/WestTexas.ttf") format("truetype");
+}
+
+.Divider {
+  padding: 2vh 0 2vh 0;
+}
+
+.DividerText {
+  color: black;
+  font-family: "Courier New", monospace;
+  font-size: 1.3em;
+  font-weight: 00;
+  padding: 0 0 1.5vh 0;
+}
+
+/* #4c9d8d; */
+button {
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  font-family: "WestTexas";
+  background-color: #2b2c33;
+  color: #f15b23;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1em;
+  width: auto;
+}
+
+button:hover {
+  background-color: black;
+}

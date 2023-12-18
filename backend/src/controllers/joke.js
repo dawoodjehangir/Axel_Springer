@@ -8,6 +8,7 @@ const getJoke = async (request, response) => {
     const randomJoke = await getJokeFromChuck();
     const headers = {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "http://localhost:3000"
     };
     // "Access-Control-Allow-Origin": "http://127.0.0.1:5500",
     response.set(headers);
