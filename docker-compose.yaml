@@ -1,11 +1,20 @@
 services:
   express-app:
-    build: ./backend/
+    # build: ./backend/
     image: dawoodjehangir/express-server-chuck:latest
     container_name: express-app
     ports:
       - "8000:8000"
   
+  react-app:
+    # build: ./react-app/
+    image: dawoodjehangir/react-app-chuck:latest
+    container_name: react-app
+    depends_on:
+      - "express-app"
+    ports:
+      - "3000:80"
+
   # react-app:
   #   build: ./react-app/
   #   image: dawoodjehangir/react-app-chuck:latest
@@ -13,13 +22,4 @@ services:
   #   depends_on:
   #     - "express-app"
   #   ports:
-  #     - "3000:80"
-
-  react-app:
-    build: ./react-app/
-    image: dawoodjehangir/react-app-chuck:latest
-    container_name: react-app
-    depends_on:
-      - "express-app"
-    ports:
-      - "3000:3000"
+  #     - "3000:3000"
