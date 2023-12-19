@@ -1,6 +1,9 @@
 import React from "react";
 import "./Divider.css";
 
+/**
+ * Simple component which contains the Button element
+ */
 function Divider({ fetchTheJoke }) {
   return (
     <>

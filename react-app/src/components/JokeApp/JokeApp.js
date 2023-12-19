@@ -5,9 +5,20 @@ import JokeContainer from "../JokeContainer/JokeContainer";
 import { fetchJoke } from "../../services/backendAPI.js";
 import "./JokeApp.css";
 
+/**
+ * Main React App component. Shows the main and invalid pages depending upon props 
+ */
+
 function JokeApp({ chuckIMG, invalidPage }) {
+
+  /**
+   * useState hook for changing joke in Joke Container after every button press
+   */
   const [joke, setJoke] = useState("");
 
+  /**
+   * Fetching the joke from services
+   */
   const handleFetchJoke = async () => {
     try {
       const gotAJoke = await fetchJoke();
@@ -17,6 +28,11 @@ function JokeApp({ chuckIMG, invalidPage }) {
     }
   };
 
+  /**
+   * Conditional rendering based on URL entered. Rendering all components
+   * if the path is "/". Otherwise, for all other paths, it shows an
+   * invalid page by just rendering Header component with basic IMG and text.
+   */
   return (
     <div className="AppContainer">
       {!invalidPage ? (

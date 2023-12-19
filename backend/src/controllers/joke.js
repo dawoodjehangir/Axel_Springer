@@ -1,5 +1,5 @@
 const { getJokeFromChuck } = require("../services/joke.js");
-const { REACTAPP } = require("../services/joke.js");
+const { REACTAPP } = require("../utils/constants.js");
 
 /**
  * Communicating with the Chuck Norris API and sending a response back

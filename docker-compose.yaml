@@ -1,0 +1,7 @@
+services:
+  express-app:
+    build: ./backend/
+    # image: dawoodjehangir/express-server-chuck
+    container_name: express-app
+    ports:
+      - "8000:8000"
