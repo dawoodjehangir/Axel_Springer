@@ -73,15 +73,15 @@ To build the images from scratch (in production setup state), alter the existing
 ```yaml
 services:
   express-app:
-    # build: ./backend/
-    image: dawoodjehangir/express-server-chuck:latest
+    build: ./backend/
+    # image: dawoodjehangir/express-server-chuck:latest
     container_name: express-app
     ports:
       - "8000:8000"
   
   react-app:
-    # build: ./react-app/
-    image: dawoodjehangir/react-app-chuck-norris:latest
+    build: ./react-app/
+    # image: dawoodjehangir/react-app-chuck-norris:latest
     container_name: react-app
     depends_on:
       - "express-app"
@@ -90,18 +90,9 @@ services:
     volumes:
       - ./react-app/nginx.conf:/etc/nginx/conf.d/default.conf
 
-
-  # react-app:
-  #   build: ./react-app/
-  #   image: dawoodjehangir/react-app-chuck:latest
-  #   container_name: react-app
-  #   depends_on:
-  #     - "express-app"
-  #   ports:
-  #     - "3000:3000"
 ```
-
-Then run the following command with `Axel_Springer` directory:
+**The _image_ repo address on docker-hub is commented so that it doesn't pull images from there. And _build_ directories are uncommented which contain the respective Docker files for each of the Apps**
+Then run the following command with `Axel_Springer` directory to build images and run the corresponding containers:
 ```sh
 docker compose up -d
 ```
